@@ -1,0 +1,47 @@
+[tool.poetry]
+name = "django-import-export"
+version = "2.4.1.dev1"
+description = "Django application and library for importing and exporting data with included admin integration."
+license = "BSD-4-Clause"
+authors = ["Informatika Mihelac <bmihelac@mihelac.org>"]
+maintainers = ["Shivansh Saini <shivanshs9@gmail.com>"]
+readme = "README.rst"
+homepage = "https://github.com/django-import-export/django-import-export"
+repository = "https://github.com/django-import-export/django-import-export"
+documentation = "https://django-import-export.readthedocs.io/en/stable/"
+classifiers = [
+    'Framework :: Django',
+    'Framework :: Django :: 2.0',
+    'Framework :: Django :: 2.1',
+    'Framework :: Django :: 2.2',
+    'Framework :: Django :: 3.0',
+    'Framework :: Django :: 3.1',
+    'Intended Audience :: Developers',
+    'License :: OSI Approved :: BSD License',
+    'Operating System :: OS Independent',
+    'Programming Language :: Python',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3.5',
+    'Programming Language :: Python :: 3.6',
+    'Programming Language :: Python :: 3.7',
+    'Programming Language :: Python :: 3 :: Only',
+    'Topic :: Software Development',
+]
+packages = [
+    { include = "import_export" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.5"
+diff-match-patch = "*"
+Django = ">= 2.0"
+tablib = {version = ">=0.14.0", extras = ["html", "ods", "xls", "xlsx", "yaml"]}
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0a5"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.urls]
+"Changelog" = "https://django-import-export.readthedocs.io/en/stable/changelog.html"
